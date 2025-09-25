@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYNX Terminal - Advanced DEX Trading Platform</title>
+    <meta name="description" content="LYNX Terminal - Professional DEX trading platform with perpetual futures support on Hyperliquid and Aster">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="lynx-logo.svg" alt="LYNX" class="logo">
+                    <span class="brand-text">LYNX Terminal</span>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="#trading" class="nav-link">Trading</a>
+                    <a href="#perpetuals" class="nav-link">Perpetuals</a>
+                    <a href="#token" class="nav-link">$LYNX Token</a>
+                    <a href="#analytics" class="nav-link">Analytics</a>
+                    <a href="#docs" class="nav-link">Docs</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-outline">Connect Wallet</button>
+                    <button class="btn btn-primary">Launch App</button>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="hero-background">
+                <div class="grid-pattern"></div>
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Professional DEX Trading
+                        <span class="gradient-text">Terminal</span>
+                    </h1>
+                    <p class="hero-description">
+                        Advanced trading platform for DEX spot and perpetual futures. 
+                        Trade on Hyperliquid, Aster, and more with institutional-grade tools.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-value">$2.4B+</span>
+                            <span class="stat-label">Volume Traded</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">50k+</span>
+                            <span class="stat-label">Active Traders</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">99.9%</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-rocket"></i>
+                            Start Trading
+                        </button>
+                        <button class="btn btn-outline btn-large">
+                            <i class="fas fa-play"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="trading-preview">
+                        <div class="trading-card">
+                            <div class="trading-header">
+                                <h3>LYNX/USDC</h3>
+                                <span class="price-change positive">+12.34%</span>
+                            </div>
+                            <div class="price-display">
+                                <span class="price">$0.4521</span>
+                                <span class="price-usd">+$0.0498</span>
+                            </div>
+                            <div class="mini-chart">
+                                <canvas id="miniChart" width="200" height="60"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="trading-controls">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active">Spot</button>
+                                <button class="tab-btn">Perps</button>
+                            </div>
+                            <div class="order-form">
+                                <div class="input-group">
+                                    <label>Amount</label>
+                                    <input type="text" placeholder="0.00" value="1,000">
+                                </div>
+                                <div class="input-group">
+                                    <label>Price</label>
+                                    <input type="text" placeholder="Market" value="$0.4521">
+                                </div>
+                                <button class="btn btn-success btn-full">Buy LYNX</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="trading">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Advanced Trading Features</h2>
+                    <p>Professional tools for serious traders</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Spot Trading</h3>
+                        <p>Trade hundreds of tokens across multiple DEXs with best price execution and minimal slippage.</p>
+                        <ul class="feature-list">
+                            <li>Multi-DEX aggregation</li>
+                            <li>Advanced order types</li>
+                            <li>Real-time analytics</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card highlight">
+                        <div class="feature-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3>Perpetual Futures</h3>
+                        <p>Trade perpetual contracts on Hyperliquid and Aster with up to 100x leverage and advanced risk management.</p>
+                        <ul class="feature-list">
+                            <li>Up to 100x leverage</li>
+                            <li>Cross-margin trading</li>
+                            <li>Auto-deleveraging</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI-Powered Insights</h3>
+                        <p>Get market intelligence with our AI-driven analysis tools and automated trading strategies.</p>
+                        <ul class="feature-list">
+                            <li>Market sentiment analysis</li>
+                            <li>Automated strategies</li>
+                            <li>Risk assessment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Token Section -->
+        <section class="token-section" id="token">
+            <div class="container">
+                <div class="token-content">
+                    <div class="token-info">
+                        <div class="token-header">
+                            <div class="token-logo">
+                                <img src="lynx-token.svg" alt="LYNX Token">
+                            </div>
+                        <div class="token-details">
+                            <h2>$LYNX Token</h2>
+                            <p class="token-network">BSC Network</p>
+                            <div class="token-contract">
+                                <span class="contract-label">Contract:</span>
+                                <span class="contract-address" id="contractAddress">0x36DC470B30C157B6a64901Fa091e3574aeFD2eB1</span>
+                                <button class="copy-btn" onclick="copyContract()" title="Copy contract address">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="token-price">
+                                <span class="price">$0.4521</span>
+                                <span class="change positive">+12.34%</span>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <div class="token-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Market Cap</span>
+                                <span class="stat-value">$45.2M</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">24h Volume</span>
+                                <span class="stat-value">$2.1M</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Total Supply</span>
+                                <span class="stat-value">100M LYNX</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Holders</span>
+                                <span class="stat-value">12,453</span>
+                            </div>
+                        </div>
+                        
+                        <div class="token-actions">
+                            <button class="btn btn-primary">Buy LYNX</button>
+                            <button class="btn btn-outline" onclick="addToWallet()">Add to Wallet</button>
+                            <button class="btn btn-outline" onclick="viewOnBSCScan()">View on BSCScan</button>
+                        </div>
+                    </div>
+                    
+                    <div class="token-chart">
+                        <div class="chart-container">
+                            <canvas id="tokenChart" width="500" height="300"></canvas>
+                        </div>
+                        <div class="chart-controls">
+                            <div class="timeframe-buttons">
+                                <button class="time-btn">1H</button>
+                                <button class="time-btn">4H</button>
+                                <button class="time-btn active">1D</button>
+                                <button class="time-btn">1W</button>
+                                <button class="time-btn">1M</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Platforms -->
+        <section class="platforms" id="perpetuals">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Supported Platforms</h2>
+                    <p>Trade across the best DEXs and perpetual platforms</p>
+                </div>
+                
+                <div class="platforms-grid">
+                    <div class="platform-card">
+                        <div class="platform-logo">
+                            <img src="hyperliquid-logo.svg" alt="Hyperliquid">
+                        </div>
+                        <h3>Hyperliquid</h3>
+                        <p>Trade perpetual futures with deep liquidity and low fees on the leading perps DEX.</p>
+                        <div class="platform-stats">
+                            <span>TVL: $50M+</span>
+                            <span>24h Vol: $120M</span>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-logo">
+                            <img src="aster-logo.svg" alt="Aster">
+                        </div>
+                        <h3>Aster</h3>
+                        <p>Advanced perpetual trading with institutional-grade features and competitive rates.</p>
+                        <div class="platform-stats">
+                            <span>TVL: $25M+</span>
+                            <span>24h Vol: $45M</span>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-logo">
+                            <img src="pancakeswap-logo.svg" alt="PancakeSwap">
+                        </div>
+                        <h3>PancakeSwap</h3>
+                        <p>The leading DEX on BSC for spot trading with the deepest liquidity pools.</p>
+                        <div class="platform-stats">
+                            <span>TVL: $2B+</span>
+                            <span>24h Vol: $80M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section class="analytics" id="analytics">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Real-Time Analytics</h2>
+                    <p>Advanced market data and trading insights</p>
+                </div>
+                
+                <div class="analytics-dashboard">
+                    <div class="analytics-card">
+                        <h3>Market Overview</h3>
+                        <div class="market-overview">
+                            <div class="market-item">
+                                <span class="symbol">BTC/USDT</span>
+                                <span class="price">$43,250</span>
+                                <span class="change positive">+2.4%</span>
+                            </div>
+                            <div class="market-item">
+                                <span class="symbol">ETH/USDT</span>
+                                <span class="price">$2,680</span>
+                                <span class="change negative">-1.2%</span>
+                            </div>
+                            <div class="market-item">
+                                <span class="symbol">LYNX/USDT</span>
+                                <span class="price">$0.4521</span>
+                                <span class="change positive">+12.3%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Volume Analysis</h3>
+                        <div class="volume-chart">
+                            <canvas id="volumeChart" width="300" height="150"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Top Gainers</h3>
+                        <div class="gainers-list">
+                            <div class="gainer-item">
+                                <span class="token">LYNX</span>
+                                <span class="gain positive">+12.34%</span>
+                            </div>
+                            <div class="gainer-item">
+                                <span class="token">BNB</span>
+                                <span class="gain positive">+5.67%</span>
+                            </div>
+                            <div class="gainer-item">
+                                <span class="token">CAKE</span>
+                                <span class="gain positive">+3.21%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="lynx-logo.svg" alt="LYNX" class="footer-logo">
+                        <span class="footer-brand-text">LYNX Terminal</span>
+                    </div>
+                    <p class="footer-description">
+                        Professional DEX trading platform with advanced tools for spot and perpetual futures trading.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://x.com/lynx_terminal" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Trading</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Spot Trading</a></li>
+                        <li><a href="#">Perpetual Futures</a></li>
+                        <li><a href="#">Options</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Token</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">LYNX Token</a></li>
+                        <li><a href="#">Tokenomics</a></li>
+                        <li><a href="#">Staking</a></li>
+                        <li><a href="#">Governance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LYNX Terminal. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Risk Disclosure</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
